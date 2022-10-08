@@ -63,7 +63,7 @@ app.all(`/*`, notFoundMiddleware); //default route
 
 /* add production build settings  */
 if (
-  process.env.NODE_ENV === "production" &&
+  process.env.NODE_ENV === "production" ||
   process.env.NODE_ENV === "staging"
 ) {
   app.use(express.static(`client/build`));
